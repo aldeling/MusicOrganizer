@@ -6,8 +6,12 @@ using MusicOrganizer.Models;
 namespace MusicOrganizer.Test
 {
   [TestClass]
-  public class AlbumTests
+  public class AlbumTests : IDisposable
   {
+    public void Dispose()
+    {
+      Album.ClearAll();
+    }
 
     [TestMethod]
     public void AlbumConstructor_CreatesInstanceOfAlbum_Album()
@@ -44,7 +48,19 @@ namespace MusicOrganizer.Test
     
     //Assert
     Assert.AreEqual(updatedAlbumTitle, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_AlbumList()
+    {
+      //Arrange
+      List<Album> newList = new List<Album> {};
 
+      //Act
+      List<Album> result = Album.GetAll();
+
+      //
+      CollectionAssert.AreEqual(newList, result);
     }
   }
+ 
 }
