@@ -9,11 +9,19 @@ namespace MusicOrganizer.Test
   public class AlbumTests
   {
 
-  [TestMethod]
-  public void AlbumConstructor_CreatesInstanceOfAlbum_Album()
-  {
-    Album newAlbum = new Album("test");
-    Assert.AreEqual(typeof(Album), newAlbum.GetType());
-  }
+    [TestMethod]
+    public void AlbumConstructor_CreatesInstanceOfAlbum_Album()
+    {
+      Album newAlbum = new Album("test");
+      Assert.AreEqual(typeof(Album), newAlbum.GetType());
+    }
+    [TestMethod]
+    public void GetAlbumTitle_ReturnsAlbumTitle_String()
+    {
+      string albumTitle = "Great Album!";
+      Album newAlbum = new Album(albumTitle);
+      string result = albumTitle.AlbumTitle;
+      Assert.AreEqual(albumTitle, result);
+    }
   }
 }
