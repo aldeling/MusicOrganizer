@@ -5,6 +5,7 @@ namespace MusicOrganizer.Models
   public class Album
   {
     public string AlbumTitle { get; set; }
+    public string AlbumArtist { get; set; }
     private static  List<Album> _instances = new List<Album> {};
 
     public Album(string albumTitle)
