@@ -4,7 +4,7 @@ namespace MusicOrganizer.Models
 {
   public class Album
   {
-    public string AlbumTitle { get; }
+    public string AlbumTitle { get; set; }
 
     public Album(string albumTitle)
     {
