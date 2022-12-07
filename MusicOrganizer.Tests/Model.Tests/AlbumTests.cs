@@ -18,9 +18,14 @@ namespace MusicOrganizer.Test
     [TestMethod]
     public void GetAlbumTitle_ReturnsAlbumTitle_String()
     {
+      //Arrange
       string albumTitle = "Great Album!";
       Album newAlbum = new Album(albumTitle);
-      string result = albumTitle.AlbumTitle;
+
+      //Act
+      string result = newAlbum.AlbumTitle;
+
+      //Assert
       Assert.AreEqual(albumTitle, result);
     }
   }
