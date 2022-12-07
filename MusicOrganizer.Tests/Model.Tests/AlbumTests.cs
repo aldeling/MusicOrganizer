@@ -49,6 +49,7 @@ namespace MusicOrganizer.Test
     //Assert
     Assert.AreEqual(updatedAlbumTitle, result);
     }
+    
     [TestMethod]
     public void GetAll_ReturnsEmptyList_AlbumList()
     {

@@ -13,7 +13,14 @@ namespace MusicOrganizer.Models
       _instances.Add(this);
     }
 
-    
+    public static List<Album> GetAll()
+    {
+      return _instances;
+    }
 
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }
